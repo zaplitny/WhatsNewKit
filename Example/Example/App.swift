@@ -85,6 +85,8 @@ extension App: WhatsNewCollectionProvider {
             ),
             secondaryAction: .init(
                 title: "Learn more",
+                backgroundColor: .red,
+                foregroundColor: .white,
                 action: .openURL(.init(string: "https://github.com/SvenTiigi/WhatsNewKit"))
             )
         )

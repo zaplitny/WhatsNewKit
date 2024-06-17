@@ -11,6 +11,7 @@ public extension WhatsNew {
         
         /// The title Text
         public var title: Text
+        public var backgroundColor: Color
         
         /// The foreground color
         public var foregroundColor: Color
@@ -31,6 +32,7 @@ public extension WhatsNew {
         ///   - action: The Action
         public init(
             title: Text,
+            backgroundColor: Color = .white.opacity(1.0),
             foregroundColor: Color = {
                 #if os(visionOS)
                 .primary
@@ -42,6 +44,7 @@ public extension WhatsNew {
             action: Action
         ) {
             self.title = title
+            self.backgroundColor = backgroundColor
             self.foregroundColor = foregroundColor
             self.hapticFeedback = hapticFeedback
             self.action = action

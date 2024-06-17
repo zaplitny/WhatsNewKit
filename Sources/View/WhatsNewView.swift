@@ -209,6 +209,13 @@ private extension WhatsNewView {
                 .buttonStyle(
                     PlainButtonStyle()
                 )
+                #else
+                .buttonStyle(
+                    SecondaryButtonStyle(
+                        secondaryAction: secondaryAction,
+                        layout: self.layout
+                    )
+                )
                 #endif
                 .foregroundColor(secondaryAction.foregroundColor)
             }
